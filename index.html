@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rede Lilás</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <h1>🌸 Rede Lilás</h1>
+    <div class="header-buttons">
+      <a href="https://br.shein.com/?onelink"><button id="modoDiscreto">Modo Discreto</button></a>
+      <button id="sairRapido">Sair Rápido</button>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="hero">
+      
+        <img src="bani.jpeg" alt="Banner Rede Lilás" width="400px">
+     
+    </div>
+    <h2>Você não está sozinha. Estamos aqui para ajudar.</h2>
+  </section>
+
+  <section class="info">
+    <div class="card">
+      <h3>Conheça seus Direitos</h3>
+      <p>Lei Maria da Penha sem juridiquês.</p>
+    </div>
+    <div class="card">
+      <h3>Rede de Apoio</h3>
+      <p>Como ajudar uma amiga ou familiar.</p>
+    </div>
+    <div class="card">
+      <h3>Navegação Segura</h3>
+      <p>Modo Discreto para sua proteção.</p>
+    </div>
+  </section>
+
+  <section class="sobre">
+    <h3>Sobre a Rede Lilás</h3>
+    <p>A Rede Lilás oferece informação, apoio e caminhos seguros para mulheres em situação de violência. Aqui você encontra orientações práticas, contatos locais e recursos para se proteger e ajudar outras pessoas.</p>
+    <p>Se precisar, use o botão <strong>Sair Rápido</strong> no cabeçalho e feche a aba imediatamente.</p>
+  </section>
+
+  <section class="galeria">
+    <div class="item"><a rel='noopener' target='_blank' href='images.jpg'><img src='images.jpg' alt='Hero'></a><div class="caption"></div></div>
+    <div class="item"><a rel='noopener' target='_blank' href='images (1).jpg'><img src='images (1).jpg' alt='Photo 1'></a><div class="caption"></div></div>
+    <div class="item"><a rel='noopener' target='_blank' href='images (2).jpg'><img src='images (2).jpg' alt='Photo 2'></a><div class="caption"></div></div>
+    <div class="item"><a rel='noopener' target='_blank' href='images (1.jpg'><img src='images (1.jpg' alt='Photo 1 (root)'></a><div class="caption"></div></div>
+    <div class="item"><a rel='noopener' target='_blank' href='WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg'><img src='WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg' alt='Photo 2 (root)'></a><div class="caption"></div></div>
+  </section>
+
+  <section class="mapa">
+    <h3>Encontre Ajuda Perto de Você</h3>
+    <iframe src="https://www.google.com/maps?q=Cear%C3%A1-Mirim&output=embed" title="Mapa de ajuda"></iframe>
+  </section>
+
+  <section class="contato">
+    <h3>Contato Rápido</h3>
+    <p>Em caso de emergência, ligue <strong>190</strong> ou procure o serviço de sua cidade.</p>
+    <form id="con">
+      <input type="text" id="nome" name="nome" placeholder="Seu nome">
+      <input type="email" id="email" name="email" placeholder="Seu e-mail (opcional)">
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem ou pedido de ajuda" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="contatoStatus" aria-live="polite" style="margin-top:8px;color:green"></div>
+  </section>
+
+  <section class="resources">
+    <h3>Contatos e Recursos Regionais (Personalizáveis)</h3>
+    <p>Adicione ou edite contatos locais — os dados ficam salvos neste navegador.</p>
+    <div style="max-width:700px;margin:8px auto 16px;display:flex;gap:8px">
+      <input id="resName" placeholder="Nome do recurso" style="flex:2;padding:8px;border-radius:6px;border:1px solid #ddd">
+      <input id="resPhone" placeholder="Telefone" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ddd">
+      <button id="addRes" style="padding:8px 12px;border-radius:6px;background:var(--primary);color:#fff;border:none;cursor:pointer">Adicionar</button>
+    </div>
+    <div id="resourceList" class="resource-list"></div>
+  </section>
+
+  <button class="quick-exit" onclick="window.location.href='about:blank'">Sair</button>
+
+  <footer>
+    <p>Rede Lilás — Informação e apoio.</p>
+  </footer>
+
+  <script>
+    // Ações rápidas
+    document.getElementById('sairRapido').addEventListener('click', function () {
+      window.location.href = 'about:blank';
+    });
+    document.getElementById('modoDiscreto').addEventListener('click', function () {
+      document.body.classList.toggle('discreto');
+    });
+
+    // Formulário: valida, salva localmente e abre o cliente de e-mail
+    document.getElementById('contatoForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nome = document.getElementById('nome').value || '';
+      var email = document.getElementById('email').value || '';
+      var mensagem = document.getElementById('mensagem').value || '';
+      if (!mensagem.trim()){
+        document.getElementById('contatoStatus').textContent = 'Por favor, escreva uma mensagem.';
+        return;
+      }
+
+      // salva localmente
+      var msgs = JSON.parse(localStorage.getItem('rl_messages') || '[]');
+      msgs.push({ nome: nome, email: email, mensagem: mensagem, ts: new Date().toISOString() });
+      localStorage.setItem('rl_messages', JSON.stringify(msgs));
+      document.getElementById('contatoStatus').textContent = 'Mensagem salva localmente e abrindo seu e-mail...';
+      var subject = encodeURIComponent('Contato pela Rede Lilás - ' + nome);
+      var body = encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\n\n' + mensagem);
+      var mailto = 'mailto:contato@redelilas.org?subject=' + subject + '&body=' + body;
+      setTimeout(function () { window.location.href = mailto; }, 700);
+    });
+
+    // Recursos: carregar/salvar e renderizar
+    function loadResources() { return JSON.parse(localStorage.getItem('rl_resources') || '[]'); }
+    function saveResources(list) { localStorage.setItem('rl_resources', JSON.stringify(list)); }
+    function escapeHtml(str) { return String(str).replace(/[&<>\"]/g, function (s) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]; }); }
+
+    function renderResources() {
+      var container = document.getElementById('resourceList');
+      container.innerHTML = '';
+      var list = loadResources();
+      if (!list.length) container.innerHTML = '<p style="color:#666">Nenhum recurso salvo ainda.</p>';
+      list.forEach(function (r, idx) {
+        var div = document.createElement('div');
+        div.className = 'resource-item';
+        var left = document.createElement('div');
+        left.innerHTML = '<strong>' + escapeHtml(r.name) + '</strong><br>Telefone: <span class="tel">' + escapeHtml(r.phone) + '</span>';
+        var right = document.createElement('div');
+        var copy = document.createElement('button');
+        copy.className = 'copy-btn'; copy.textContent = 'Copiar'; copy.setAttribute('data-copy', r.phone);
+        var edit = document.createElement('button'); edit.style.marginLeft = '8px'; edit.textContent = 'Editar';
+        var del = document.createElement('button'); del.style.marginLeft = '8px'; del.textContent = 'Remover';
+        copy.addEventListener('click', function () {
+          navigator.clipboard && navigator.clipboard.writeText(r.phone).then(function () { copy.textContent = 'Copiado'; setTimeout(function () { copy.textContent = 'Copiar'; }, 1400); }, function () { alert('Copie manualmente: ' + r.phone); });
+        });
+        edit.addEventListener('click', function () {
+          document.getElementById('resName').value = r.name;
+          document.getElementById('resPhone').value = r.phone;
+          document.getElementById('addRes').textContent = 'Atualizar';
+          document.getElementById('addRes').dataset.edit = idx;
+        });
+        del.addEventListener('click', function () { if (confirm('Remover esse recurso?')) { list.splice(idx, 1); saveResources(list); renderResources(); } });
+        right.appendChild(copy); right.appendChild(edit); right.appendChild(del);
+        div.appendChild(left); div.appendChild(right); container.appendChild(div);
+      });
+    }
+
+    document.getElementById('addRes').addEventListener('click', function () {
+      var name = document.getElementById('resName').value.trim();
+      var phone = document.getElementById('resPhone').value.trim();
+      if (!name || !phone) { alert('Preencha nome e telefone.'); return; }
+      var list = loadResources();
+      var editIdx = this.dataset.edit;
+      if (editIdx !== undefined) { list[editIdx] = { name: name, phone: phone }; delete this.dataset.edit; this.textContent = 'Adicionar'; }
+      else list.push({ name: name, phone: phone });
+      saveResources(list); renderResources(); document.getElementById('resName').value = ''; document.getElementById('resPhone').value = '';
+    });
+
+    // primeira renderização
+    renderResources();
+  </script>
+</body>
+</html>
