@@ -1,0 +1,41 @@
+RELATÓRIO DIGITAL EXTREMO
+
+Componentes
+
+- Ryan Abraham
+- João Gabriel Bezerra
+- Thalita Isabeli
+- Lays Soares
+- Maxwell Rodrigues
+- Evelyn Camilly
+- Maria Eduarda
+
+Funções dos componentes
+
+- Líder de Sprint: Maria Eduarda
+- Arquiteto de Código 1: Ryan Abraham
+- Arquiteto de Código 2: Thalita Isabeli
+- Designer: Evelyn Camilly
+- Redator de Conteúdo: Lays Soares
+- Testes: Maxwell Rodrigues
+- Documentador: João Gabriel Bezerra
+
+Tema
+
+O nosso tema foi: Violência contra a mulher + Afeganistão.
+
+Motivo da escolha do tema e consenso do grupo
+
+Todos os componentes tiveram suas próprias ideias, ideias incríveis. Juntamos todas elas e fizemos uma votação, na qual cada um escolheu o tema que achava que seria melhor para apresentarmos e que considerava que se encaixaria melhor no projeto. O tema escolhido foi o vencedor da votação e, além disso, é um assunto muito importante para a sociedade, pois sabemos o peso e a importância que ele possui.
+
+Problema
+
+O principal problema abordado pelo nosso projeto é a violência contra as mulheres e a dificuldade que muitas vítimas encontram para buscar ajuda e denunciar seus agressores. Além disso, o projeto também aborda a situação das mulheres e meninas no Afeganistão, que enfrentam graves restrições de direitos, como limitações ao acesso à educação, ao trabalho e à participação na vida pública. Segundo a ONU Mulheres, quase 80% das jovens afegãs estão fora da educação, do emprego ou de programas de formação.
+
+Dessa forma, percebemos que o problema não está apenas na violência em si, mas também na falta de informação, apoio e acesso a mecanismos de proteção e denúncia.
+
+Solução
+
+A solução proposta pelo nosso projeto é desenvolver um site que facilite o acesso à informação e à ajuda para mulheres e meninas que estejam passando por situações de violência. O site poderá apresentar orientações sobre como buscar ajuda e realizar uma denúncia, além de divulgar canais oficiais de atendimento, como o Ligue 180, que oferece orientação e recebe e encaminha denúncias de violência contra a mulher.
+
+Também pretendemos dar visibilidade às mulheres do Afeganistão, apresentando informações sobre a realidade enfrentada por elas e criando um espaço para divulgar relatos e histórias, de forma segura e responsável. Assim, o projeto busca informar, conscientizar e mostrar que a violência contra as mulheres é um problema que precisa ser enfrentado por toda a sociedade.
