@@ -33,18 +33,21 @@
   </section>
 
   <section class="info">
-    <div class="card">
+    <a class="card" href="direitos.html">
       <h3>Conheça seus Direitos</h3>
-      <p>Lei Maria da Penha sem juridiquês.</p>
-    </div>
-    <div class="card">
-      <h3>Rede de Apoio</h3>
-      <p>Como ajudar uma amiga ou familiar.</p>
-    </div>
-    <div class="card">
-      <h3>Navegação Segura</h3>
+      <p>conheça mais sobre os seus direitos como mulher.</p>
+      <span class="card-link">Ver informações</span>
+    </a>
+    <a class="card" href="rede-de-apoio.html">
+      <h3>mulheres no afeganistão</h3>
+      <p>Conheça mais sobre a vida das mulheres q vivem no afeganistão</p>
+      <span class="card-link">Ver informações</span>
+    </a>
+    <a class="card" href="navegacao-segura.html">
+      <h3>modo discreto</h3>
       <p>Modo Discreto para sua proteção.</p>
-    </div>
+      <span class="card-link">Ver informações</span>
+    </a>
   </section>
 
   <section class="sobre">
@@ -97,7 +100,7 @@
   </footer>
 
   <script>
-    // Ações rápidas
+    
     var sairRapido = document.getElementById('sairRapido');
     if (sairRapido) sairRapido.addEventListener('click', function () {
       window.location.href = 'about:blank';
@@ -128,7 +131,7 @@
 
     localizarDelegacias();
 
-    // Formulário: valida, salva localmente e abre o cliente de e-mail
+
     document.getElementById('con').addEventListener('submit', function (e) {
       e.preventDefault();
       var nome = document.getElementById('nome').value || '';
@@ -139,7 +142,7 @@
         return;
       }
 
-      // salva localmente
+
       var msgs = JSON.parse(localStorage.getItem('rl_messages') || '[]');
       msgs.push({ nome: nome, email: email, mensagem: mensagem, ts: new Date().toISOString() });
       localStorage.setItem('rl_messages', JSON.stringify(msgs));
@@ -150,7 +153,7 @@
       setTimeout(function () { window.location.href = mailto; }, 700);
     });
 
-    // Recursos: carregar/salvar e renderizar
+  
     function loadResources() { return JSON.parse(localStorage.getItem('rl_resources') || '[]'); }
     function saveResources(list) { localStorage.setItem('rl_resources', JSON.stringify(list)); }
     function escapeHtml(str) { return String(str).replace(/[&<>\"]/g, function (s) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]; }); }
@@ -196,7 +199,7 @@
       saveResources(list); renderResources(); document.getElementById('resName').value = ''; document.getElementById('resPhone').value = '';
     });
 
-    // primeira renderização
+  
     renderResources();
   </script>
 </body>
