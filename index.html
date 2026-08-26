@@ -7,14 +7,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Felipa&family=Viaoda+Libre&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1 id="TEXTO">🌸 Rede Lilás</h1>
     <div class="header-buttons">
       <a href="https://br.shein.com/?onelink"><button id="modoDiscreto">Modo Discreto</button></a>
-      <button id="sairRapido">Sair Rápido</button>
     </div>
   </header>
 
@@ -64,7 +63,8 @@
 
   <section class="mapa">
     <h3>Encontre Ajuda Perto de Você</h3>
-    <iframe src="https://www.google.com/maps?q=Cear%C3%A1-Mirim&output=embed" title="Mapa de ajuda"></iframe>
+    <p id="mapaStatus" aria-live="polite">Solicitando sua localização para encontrar as delegacias mais próximas...</p>
+    <iframe id="mapaAjuda" title="Mapa com as delegacias mais próximas" loading="lazy"></iframe>
   </section>
 
   <section class="contato">
@@ -98,15 +98,38 @@
 
   <script>
     // Ações rápidas
-    document.getElementById('sairRapido').addEventListener('click', function () {
+    var sairRapido = document.getElementById('sairRapido');
+    if (sairRapido) sairRapido.addEventListener('click', function () {
       window.location.href = 'about:blank';
     });
     document.getElementById('modoDiscreto').addEventListener('click', function () {
       document.body.classList.toggle('discreto');
     });
 
+    function localizarDelegacias() {
+      var status = document.getElementById('mapaStatus');
+      var mapa = document.getElementById('mapaAjuda');
+
+      if (!navigator.geolocation) {
+        status.textContent = 'Seu aparelho não permite localizar delegacias automaticamente.';
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(function (posicao) {
+        var latitude = posicao.coords.latitude;
+        var longitude = posicao.coords.longitude;
+        var busca = encodeURIComponent('delegacias mais próximas');
+        mapa.src = 'https://www.google.com/maps?q=' + busca + '&ll=' + latitude + ',' + longitude + '&z=14&output=embed';
+        status.textContent = 'Mostrando delegacias próximas à sua localização.';
+      }, function () {
+        status.textContent = 'Não foi possível acessar sua localização. Permita o acesso para encontrar as delegacias mais próximas.';
+      }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
+    }
+
+    localizarDelegacias();
+
     // Formulário: valida, salva localmente e abre o cliente de e-mail
-    document.getElementById('contatoForm').addEventListener('submit', function (e) {
+    document.getElementById('con').addEventListener('submit', function (e) {
       e.preventDefault();
       var nome = document.getElementById('nome').value || '';
       var email = document.getElementById('email').value || '';

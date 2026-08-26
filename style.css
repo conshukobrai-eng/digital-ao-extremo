@@ -5,6 +5,8 @@
     --muted:#e8daef;
     --text:#4a235a;
   }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { overflow-x: hidden; }
   body {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg);
@@ -19,7 +21,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
   }
+  header h1 { margin: 0; }
   .header-buttons button {
     background-color: var(--accent);
     color: white;
@@ -45,15 +49,9 @@
   }
 
   #TEXTO {
-
-    
-      font-family: "Felipa", serif;
-      font-weight: 400;
-      font-style: normal;
-    
-    
+    font-family: "Cormorant Garamond", serif;
     font-size: 2.5rem; 
-    font-weight: 400;
+    font-weight: 700;
     margin: 0;
   }
 
@@ -67,8 +65,8 @@
   
   .banner-text {
     width: 60%; 
-    font-family: "Viaoda Libre", cursive;
-    font-size: 1,5rem; 
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.5rem; 
     line-height: 1.8; 
     color: #333;
     margin: 5%;
@@ -76,7 +74,10 @@
   }
 
   .hero img {
-  max-width:100%; 
+  width:100%;
+  max-width:400px; 
+  height:auto;
+  display:block;
   border-radius:12px; 
   box-shadow:0 6px 18px rgba(74,35,90,0.12)
   }
@@ -141,8 +142,9 @@
 
   .galeria .item:hover .caption{transform:translateY(0)}
 
-  .contato {background-color:#fff;
+    .contato {background-color:#fff;
        max-width:700px; 
+      width:calc(100% - 40px);
        margin:20px auto 40px;
         padding:16px; 
         border-radius:10px; 
@@ -162,8 +164,84 @@
   .resource-list {display:grid; gap:10px}
   .resource-item {background:var(--muted); padding:10px; border-radius:8px; display:flex; justify-content:space-between; align-items:center}
   .copy-btn {background:transparent; border:1px solid rgba(0,0,0,0.08); padding:6px 8px; border-radius:6px; cursor:pointer}
+  #mapaStatus {margin:0 auto 12px; color:#666}
   iframe {width:90%; height:300px; border:none; border-radius:10px}
   footer {background-color:#a569bd; color:white; padding:10px}
   .discreto header, .discreto .banner, .discreto .info, .discreto .sobre, .discreto .galeria, .discreto .mapa, .discreto footer {visibility:hidden}
   .quick-exit {display:none; position:fixed; top:8px; right:8px; background:#fff; color:var(--text); padding:6px 10px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.12)}
   .discreto .quick-exit {display:block}
+
+  @media (max-width: 700px) {
+    header {
+      padding: 12px 16px;
+      align-items: flex-start;
+    }
+
+    #TEXTO { font-size: 2rem; }
+    .header-buttons { flex-shrink: 0; }
+    .header-buttons button {
+      margin-left: 0;
+      padding: 9px 10px;
+      font-size: .8rem;
+    }
+
+    .banner {
+      padding: 28px 16px;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .hero { width: 100%; }
+    .hero img { max-width: 100%; }
+    .banner-text {
+      width: 100%;
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .info { margin: 16px 10px; }
+    .card {
+      width: 100%;
+      margin: 6px 0;
+    }
+
+    .sobre { margin: 20px auto; padding: 0 20px; }
+    .galeria {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      padding: 0 16px;
+    }
+
+    .contato {
+      width: calc(100% - 32px);
+      margin: 20px auto 32px;
+      padding: 14px;
+    }
+
+    .resources { padding: 0 16px; }
+    .resources > div[style] {
+      flex-wrap: wrap;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    .resources > div[style] input,
+    .resources > div[style] button {
+      min-width: 0;
+      flex: 1 1 100% !important;
+    }
+    .resource-item {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .resource-item > div:last-child {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .resource-item > div:last-child button { margin-left: 0 !important; }
+
+    #mapaStatus { padding: 0 16px; }
+    iframe { width: calc(100% - 32px); height: 280px; }
+  }
