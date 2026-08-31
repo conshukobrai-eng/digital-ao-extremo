@@ -5,6 +5,8 @@
     --muted:#e8daef;
     --text:#4a235a;
   }
+
+
   *, *::before, *::after { box-sizing: border-box; }
   html { overflow-x: hidden; }
   body {
@@ -14,6 +16,8 @@
     margin: 0;
     text-align: center;
   }
+
+
   header {
     background-color: #a569bd;
     color: white;
@@ -23,6 +27,7 @@
     align-items: center;
     gap: 12px;
   }
+
   header h1 { margin: 0; }
   .page-back {
     color:white;
@@ -198,13 +203,25 @@
     font-size: 1.1rem;
     border-radius: 10px;
   }
+.featured-image {
+    margin: 0 0 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(74, 35, 90, 0.10);
+}
 
+.featured-image img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
   .image-gallery-two {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin: 18px 0 24px;
-  }
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
 
   .image-gallery-two figure {
     margin: 0;
@@ -220,33 +237,25 @@
     object-fit: cover;
   }
 
-  .afghan-article .freedom-list {
-    list-style: disc;
+.image-gallery-two {
     margin: 18px 0 24px;
-  }
+}
 
-  .afghan-article .statement {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-top: 22px;
-  }
+.image-gallery-two figure:only-child {
+    width: 100%;
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(74, 35, 90, 0.10);
+}
 
-  .afghan-article .hashtags {
-    color: var(--primary);
-    font-weight: 700;
-    margin-top: 12px;
-  }
-
-  .action-button {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: var(--primary);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-  }
+.image-gallery-two figure:only-child img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+   
 
   .sobre {
       max-width:1000px; 
