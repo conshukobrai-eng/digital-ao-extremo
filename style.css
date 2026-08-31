@@ -170,6 +170,63 @@
   .detail-kicker { color:var(--primary); font-weight:600; margin-bottom:4px; }
   .detail-note { border-left:4px solid var(--accent); padding-left:14px; font-weight:600; }
 
+  .afghan-article {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 28px 28px 32px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(74, 35, 90, 0.08);
+  }
+
+  .afghan-article .lead {
+    font-size: 1.08rem;
+    color: #4a235a;
+    margin-bottom: 20px;
+  }
+
+  .afghan-article ol,
+  .afghan-article ul {
+    padding-left: 1.5rem;
+  }
+
+  .afghan-article .quote {
+    margin: 26px 0;
+    padding: 18px 22px;
+    background: #f3e4f7;
+    border-left: 5px solid var(--primary);
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+
+  .afghan-article .freedom-list {
+    list-style: disc;
+    margin: 18px 0 24px;
+  }
+
+  .afghan-article .statement {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 22px;
+  }
+
+  .afghan-article .hashtags {
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 12px;
+  }
+
+  .action-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
   .sobre {
       max-width:1000px; 
       margin:20px auto; 
