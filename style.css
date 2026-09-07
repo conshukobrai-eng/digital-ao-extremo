@@ -17,6 +17,22 @@
     text-align: center;
   }
 
+  a {
+    color: var(--primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: color .2s, background-color .2s;
+  }
+
+  a:hover {
+    color: #6c3483;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+
 
   header {
     background-color: #a569bd;
@@ -103,18 +119,25 @@
 
   .info {
   display:flex; 
-  justify-content:space-around; 
-  flex-wrap:wrap; margin:20px
+  justify-content:center; 
+  align-items:stretch;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:20px
   }
 
   .card {
   background-color:var(--muted); 
-  padding:15px; 
+  padding:22px 20px; 
   border-radius:10px; 
-  width:250px; 
-  margin:10px;
+  width:300px;
+  min-height:190px;
+  margin:0;
   color:var(--text);
   text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
   transition:transform .2s, box-shadow .2s, background-color .2s;
   }
 
