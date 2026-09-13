@@ -37,6 +37,13 @@
     text-align: center;
   }
 
+  p {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
   a {
     color: var(--primary);
     text-decoration-thickness: 2px;
