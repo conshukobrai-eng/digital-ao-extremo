@@ -142,9 +142,23 @@
     font-weight: 700;
     border: 1px solid rgba(255,255,255,0.35);
     user-select: none;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
   }
 
   .topbar-menu summary::-webkit-details-marker { display: none; }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .topbar-menu summary:hover,
+  .topbar-menu summary:focus-visible {
+    background: rgba(255,255,255,0.28);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 35, 90, 0.16);
+  }
 
   .topbar-menu[open] summary {
     background: rgba(255,255,255,0.22);
@@ -152,7 +166,7 @@
 
   .menu-links {
     position: absolute;
-    right: 0;
+    left: 0;
     top: calc(100% + 8px);
     min-width: 220px;
     background: #fff;
@@ -162,6 +176,13 @@
     display: grid;
     gap: 6px;
     text-align: left;
+    transform-origin: left top;
+    animation: menu-open .2s ease-out;
+  }
+
+  @keyframes menu-open {
+    from { opacity: 0; transform: translateY(-6px) scaleX(0); }
+    to { opacity: 1; transform: translateY(0) scaleX(1); }
   }
 
   .menu-links a {
@@ -690,6 +711,10 @@
       justify-content: space-between;
     }
 
+    .header-right {
+      justify-content: flex-end;
+    }
+
     header h1 {
       width: auto;
       font-size: clamp(1.8rem, 6vw, 2.4rem);
@@ -711,8 +736,7 @@
     }
 
     .menu-links {
-      right: 0;
-      transform: none;
+      left: 0;
     }
 
     #TEXTO { font-size: 2rem; }
