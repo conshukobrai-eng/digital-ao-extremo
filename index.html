@@ -30,7 +30,7 @@
         <h1 id="TEXTO">🌸 Rede Lilás</h1>
       </div>
       <div class="header-buttons header-right">
-        <a href="https://br.shein.com/?onelink"><button id="modoDiscreto">Modo Discreto</button></a>
+        <button id="modoDiscreto" type="button" aria-pressed="false">Modo discreto</button>
       </div>
     </div>
   </header>
@@ -71,14 +71,14 @@
   <section class="sobre">
     <h3>Sobre a Rede Lilás</h3>
     <p>A Rede Lilás oferece informação, apoio e caminhos seguros para mulheres em situação de violência. Aqui você encontra orientações práticas, contatos locais e recursos para se proteger e ajudar outras pessoas.</p>
-    <p>Se precisar, use o botão <strong>Sair Rápido</strong> no cabeçalho e feche a aba imediatamente.</p>
+    <p>Se precisar, use o botão <strong>Sair</strong> no canto da tela e feche a aba imediatamente.</p>
   </section>
 
   <section class="galeria">
     <div class="item"><a rel='noopener' target='_blank' href='images.jpg'><img src='images.jpg' alt='Hero'></a><div class="caption"></div></div>
     <div class="item"><a rel='noopener' target='_blank' href='images (1).jpg'><img src='images (1).jpg' alt='Photo 1'></a><div class="caption"></div></div>
     <div class="item"><a rel='noopener' target='_blank' href='images (2).jpg'><img src='images (2).jpg' alt='Photo 2'></a><div class="caption"></div></div>
-    <div class="item"><a rel='noopener' target='_blank' href='images (1.jpg'><img src='images (1.jpg' alt='Photo 1 (root)'></a><div class="caption"></div></div>
+  <div class="item"><a rel='noopener' target='_blank' href='images (1.jpg'><img src='images (1.jpg' alt='Photo 1 (root)'></a><div class="caption"></div></div>
     <div class="item"><a rel='noopener' target='_blank' href='WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg'><img src='WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg' alt='Photo 2 (root)'></a><div class="caption"></div></div>
   </section>
 
@@ -86,6 +86,7 @@
     <h3>Encontre Ajuda Perto de Você</h3>
     <p id="mapaStatus" aria-live="polite">Solicitando sua localização para encontrar as delegacias mais próximas...</p>
     <iframe id="mapaAjuda" title="Mapa com as delegacias mais próximas" loading="lazy"></iframe>
+    <a id="mapaLink" class="action-button map-link" href="https://www.google.com/maps/search/delegacias+mais+pr%C3%B3ximas" target="_blank" rel="noopener">Abrir busca no Google Maps</a>
   </section>
 
   <section class="contato">
@@ -125,14 +126,17 @@
     });
     document.getElementById('modoDiscreto').addEventListener('click', function () {
       document.body.classList.toggle('discreto');
+      this.setAttribute('aria-pressed', document.body.classList.contains('discreto'));
     });
 
     function localizarDelegacias() {
       var status = document.getElementById('mapaStatus');
       var mapa = document.getElementById('mapaAjuda');
+      var mapaLink = document.getElementById('mapaLink');
 
       if (!navigator.geolocation) {
         status.textContent = 'Seu aparelho não permite localizar delegacias automaticamente.';
+        mapaLink.hidden = false;
         return;
       }
 
@@ -141,9 +145,11 @@
         var longitude = posicao.coords.longitude;
         var busca = encodeURIComponent('delegacias mais próximas');
         mapa.src = 'https://www.google.com/maps?q=' + busca + '&ll=' + latitude + ',' + longitude + '&z=14&output=embed';
+        mapaLink.href = 'https://www.google.com/maps/search/' + busca + '/@' + latitude + ',' + longitude + ',14z';
         status.textContent = 'Mostrando delegacias próximas à sua localização.';
       }, function () {
         status.textContent = 'Não foi possível acessar sua localização. Permita o acesso para encontrar as delegacias mais próximas.';
+        mapaLink.hidden = false;
       }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
     }
 
@@ -161,7 +167,13 @@
       }
 
 
-      var msgs = JSON.parse(localStorage.getItem('rl_messages') || '[]');
+      var msgs;
+      try {
+        msgs = JSON.parse(localStorage.getItem('rl_messages') || '[]');
+        if (!Array.isArray(msgs)) msgs = [];
+      } catch (error) {
+        msgs = [];
+      }
       msgs.push({ nome: nome, email: email, mensagem: mensagem, ts: new Date().toISOString() });
       localStorage.setItem('rl_messages', JSON.stringify(msgs));
       document.getElementById('contatoStatus').textContent = 'Mensagem salva localmente e abrindo seu e-mail...';
@@ -172,7 +184,14 @@
     });
 
   
-    function loadResources() { return JSON.parse(localStorage.getItem('rl_resources') || '[]'); }
+    function loadResources() {
+      try {
+        var resources = JSON.parse(localStorage.getItem('rl_resources') || '[]');
+        return Array.isArray(resources) ? resources : [];
+      } catch (error) {
+        return [];
+      }
+    }
     function saveResources(list) { localStorage.setItem('rl_resources', JSON.stringify(list)); }
     function escapeHtml(str) { return String(str).replace(/[&<>\"]/g, function (s) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]; }); }
 
