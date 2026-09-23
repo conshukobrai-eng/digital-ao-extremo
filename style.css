@@ -6,27 +6,6 @@
     --text:#4a235a;
   }
 
-  .header-buttons {
-    display: flex;
-    gap: 10px; 
-    justify-content: center; 
-    margin-top: 10px; 
-  }
-  
-  .header-buttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #6a1b9a; 
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .header-buttons button:hover {
-    background-color: #8e24aa; }
-
   *, *::before, *::after { box-sizing: border-box; }
   html { overflow-x: hidden; }
   body {
@@ -85,33 +64,20 @@
     position: relative;
   }
 
-  .header-left,
-  .header-right {
+  .header-left {
     display: flex;
     align-items: center;
-    gap: 12px;
-  }
-
-  .header-left {
     justify-content: flex-start;
+    gap: 12px;
+    min-width: 0;
     flex: 1;
   }
 
   .header-right {
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-  }
-
-  .header-inner > h1 {
-    margin: 0;
-  }
-
-  .header-inner > .topbar-menu {
-    margin-right: auto;
-  }
-
-  .header-inner > .page-back {
-    margin-left: 12px;
   }
 
   header h1 { margin: 0; }
@@ -216,7 +182,14 @@
     padding: 10px 14px;
     border-radius: 8px;
     cursor: pointer;
-    margin-left: 8px;
+    white-space: nowrap;
+    transition: background-color .2s ease, transform .2s ease;
+  }
+
+  .header-buttons button:hover,
+  .header-buttons button:focus-visible {
+    background-color: #c56f68;
+    transform: translateY(-1px);
   }
 
   .banner {
@@ -560,17 +533,12 @@
   }
 
   @media (max-width: 700px) {
-    body { padding-top: 116px; }
+    body { padding-top: 88px; }
     header { padding: 10px 12px; }
-    .header-inner,
-    .header-left { flex-wrap: wrap; }
-    .header-inner { justify-content: center; }
-    .header-left { justify-content: center; flex-basis: 100%; }
-    .header-right { margin-left: 0; }
-    .header-inner > .page-back { margin-left: 0; }
-    .topbar-menu { z-index: 2; }
+    .header-inner { gap: 8px; }
+    .topbar-menu { z-index: 2; flex-shrink: 0; }
     .menu-links { left: 0; right: auto; min-width: min(260px, calc(100vw - 24px)); }
-    #TEXTO { font-size: 1.8rem; }
+    #TEXTO { font-size: clamp(1.45rem, 7vw, 2rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
     .banner { flex-direction: column; padding: 28px 16px; }
     .banner-text { margin: 0; text-align: left; }
     .hero img { max-height: 300px; object-fit: cover; }
@@ -695,54 +663,10 @@
   .discreto .quick-exit {display:block}
 
   @media (max-width: 700px) {
-    header {
-      padding: 12px 16px;
-    }
-
-    .header-inner {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .header-left,
-    .header-right {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .header-right {
-      justify-content: flex-end;
-    }
-
-    header h1 {
-      width: auto;
-      font-size: clamp(1.8rem, 6vw, 2.4rem);
-      line-height: 1.2;
-      text-align: center;
-      flex: 1;
-    }
-
-    .page-back {
-      width: auto;
-      text-align: center;
-      display: inline-block;
-    }
-
-    .topbar-menu {
-      width: auto;
-      display: flex;
-      justify-content: center;
-    }
-
-    .menu-links {
-      left: 0;
-    }
-
-    #TEXTO { font-size: 2rem; }
+    header h1 { line-height: 1.2; text-align: left; }
+    .page-back { display: inline-block; white-space: nowrap; }
     .header-buttons { flex-shrink: 0; }
     .header-buttons button {
-      margin-left: 0;
       padding: 9px 10px;
       font-size: .8rem;
     }
