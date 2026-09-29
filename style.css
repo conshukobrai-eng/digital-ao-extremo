@@ -683,6 +683,13 @@
   .contato input[type=text], .contato input[type=email], 
   .contato textarea {padding:8px; border-radius:6px; border:1px solid #ddd; width:100%; box-sizing:border-box}
   .contato button[type=submit] {background:var(--primary); color:#fff; border:none; padding:10px 12px; border-radius:8px; cursor:pointer}
+  .cadastro {max-width:700px; width:calc(100% - 40px); margin:24px auto 40px; padding:20px; border-radius:8px; background:#fff; text-align:left; box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+  .cadastro h3 {margin-top:0}
+  .cadastro form {display:grid; gap:10px}
+  .cadastro input {width:100%; min-height:42px; padding:8px 10px; border:1px solid #c9bdce; border-radius:6px; font:inherit}
+  .cadastro button {justify-self:start; min-height:42px; padding:9px 16px; border:0; border-radius:6px; background:var(--primary); color:#fff; font:inherit; font-weight:700; cursor:pointer}
+  .cadastro button:hover, .cadastro button:focus-visible {background:#7d3d9d; color:#fff}
+  .cadastro-status {max-width:700px; width:calc(100% - 40px); margin:12px auto; padding:12px 16px; border-radius:6px; background:#e4f2e7; color:#245b34; font-weight:700; text-align:center}
   .resources {max-width:1000px; margin:10px auto 24px; padding:0 20px; text-align:left}
   .resource-list {display:grid; gap:10px}
   .resource-item {background:var(--muted); padding:10px; border-radius:8px; display:flex; justify-content:space-between; align-items:center}

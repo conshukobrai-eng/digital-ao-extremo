@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="cadastroStatus" class="cadastro-status" role="status" aria-live="polite" hidden></div>
   <header>
     <div class="header-inner">
       <div class="header-left">
@@ -30,8 +31,8 @@
         <h1 id="TEXTO">🌸 Rede Lilás</h1>
       </div>
       <div class="header-buttons header-right">
-        <button id="modoDiscreto" type="button" aria-pressed="false">Modo discreto</button>
-      </div>
+        <button type="button" id="modoDiscreto">Modo discreto</button>
+
     </div>
   </header>
 
@@ -51,21 +52,7 @@
   </section>
 
   <section class="info">
-    <a class="card" href="direitos.html">
-      <h3>Conheça seus Direitos</h3>
-      <p>conheça mais sobre os seus direitos como mulher.</p>
-      <span class="card-link">Ver informações</span>
-    </a>
-    <a class="card" href="rede-de-apoio.html">
-      <h3>mulheres no afeganistão</h3>
-      <p>Conheça mais sobre a vida das mulheres que vivem no afeganistão</p>
-      <span class="card-link">Ver informações</span>
-    </a>
-    <a class="card" href="navegacao-segura.html">
-      <h3>Relatos</h3>
-      <p>casos historicos de superação para inspirar</p>
-      <span class="card-link">Ver informações</span>
-    </a>
+    
   </section>
 
   <section class="sobre">
@@ -89,33 +76,20 @@
     <a id="mapaLink" class="action-button map-link" href="https://www.google.com/maps/search/delegacias+mais+pr%C3%B3ximas" target="_blank" rel="noopener">Abrir busca no Google Maps</a>
   </section>
 
-  <section class="contato">
-    <h3>Contato Rápido</h3>
-    <p>Em caso de emergência, ligue <strong>190</strong> ou procure o serviço de sua cidade.</p>
-    <form id="con">
-      <input type="text" id="nome" name="nome" placeholder="Seu nome">
-      <input type="email" id="email" name="email" placeholder="Seu e-mail (opcional)">
-      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem ou pedido de ajuda" required></textarea>
-      <button type="submit">Enviar</button>
+  <section class="cadastro">
+    <h3>Cadastre seu perfil</h3>
+    <form id="cadastroForm">
+      <label for="cadastroNome">Nome</label>
+      <input id="cadastroNome" name="nome" type="text" autocomplete="name" required>
+      <label for="cadastroEmail">E-mail</label>
+      <input id="cadastroEmail" name="email" type="email" autocomplete="email" required>
+      <button type="submit">Cadastrar</button>
     </form>
-    <div id="contatoStatus" aria-live="polite" style="margin-top:8px;color:green"></div>
   </section>
 
-  <section class="resources">
-    <h3>Contatos e Recursos Regionais (Personalizáveis)</h3>
-    <p>Adicione ou edite contatos locais — os dados ficam salvos neste navegador.</p>
-    <div style="max-width:700px;margin:8px auto 16px;display:flex;gap:8px">
-      <input id="resName" placeholder="Nome do recurso" style="flex:2;padding:8px;border-radius:6px;border:1px solid #ddd">
-      <input id="resPhone" placeholder="Telefone" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ddd">
-      <button id="addRes" style="padding:8px 12px;border-radius:6px;background:var(--primary);color:#fff;border:none;cursor:pointer">Adicionar</button>
-    </div>
-    <div id="resourceList" class="resource-list"></div>
-  </section>
-
-  <button class="quick-exit" onclick="window.location.href='about:blank'">Sair</button>
 
   <footer>
-    <p>Rede Lilás — Informação e apoio.</p>
+    <p>Rede Lilás — Informação e apoio. CEEPHXV</p>
   </footer>
 
   <script>
@@ -125,8 +99,21 @@
       window.location.href = 'about:blank';
     });
     document.getElementById('modoDiscreto').addEventListener('click', function () {
-      document.body.classList.toggle('discreto');
-      this.setAttribute('aria-pressed', document.body.classList.contains('discreto'));
+      window.location.href = 'https://br.shein.com/';
+    });
+
+    var cadastroTimeout;
+    document.getElementById('cadastroForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var statusCadastro = document.getElementById('cadastroStatus');
+      statusCadastro.textContent = 'perfil cadastrado';
+      statusCadastro.hidden = false;
+      window.clearTimeout(cadastroTimeout);
+      cadastroTimeout = window.setTimeout(function () {
+        statusCadastro.hidden = true;
+      }, 4000);
+      this.reset();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     function localizarDelegacias() {
