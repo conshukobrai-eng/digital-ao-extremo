@@ -178,7 +178,6 @@
     color: var(--primary);
   }
 
-<<<<<<< HEAD
   .topbar-menu .stories-trigger {
     display: block;
     width: 100%;
@@ -200,56 +199,6 @@
     transform: none;
     box-shadow: none;
   }
-=======
-  .stories-menu {
-    position: relative;
-  }
-
-  .topbar-menu .stories-trigger,
-  .topbar-menu[open] .stories-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    padding: 10px 12px;
-    border: 0;
-    border-radius: 8px;
-    background: #fff;
-    color: var(--text);
-    cursor: pointer;
-    font-weight: 700;
-    list-style: none;
-    transition: background-color .2s ease;
-  }
-
-  .topbar-menu .stories-trigger::-webkit-details-marker { display: none; }
-  .stories-trigger span { font-size: 1.25rem; line-height: 1; }
-  .topbar-menu .stories-trigger:hover,
-  .topbar-menu .stories-trigger:focus-visible,
-  .stories-menu[open] > .stories-trigger {
-    background: #e8daef;
-    color: var(--text);
-    transform: none;
-    box-shadow: none;
-  }
-  .stories-menu[open] > .stories-trigger span { transform: rotate(90deg); }
-
-  .stories-links {
-    position: absolute;
-    top: 0;
-    left: calc(100% + 8px);
-    min-width: 210px;
-    padding: 8px;
-    display: grid;
-    gap: 6px;
-    background: #fbf7fc;
-    border: 1px solid #dcc9e3;
-    border-radius: 10px;
-    box-shadow: 0 12px 24px rgba(74, 35, 90, 0.16);
-    text-align: left;
-    animation: menu-open .2s ease-out;
-  }
->>>>>>> e243eb23f266f343a9ff155b0a18d79760b2a03a
 
   .page-back {
     color:white;
@@ -304,10 +253,10 @@
   }
 
   .banner-img {
-    width: 100%;
-    max-width: 520px;
-    height: auto;
-    object-fit: cover;
+    width: 20%;
+    max-width: 200px;
+    height: 20%;
+   
 
   }
   
@@ -330,6 +279,10 @@
   box-shadow:0 6px 18px rgba(74,35,90,0.12);
   animation: image-enter .9s .12s cubic-bezier(.2,.7,.2,1) both, gentle-float 6s 1s ease-in-out infinite;
   transition: transform .45s ease, box-shadow .45s ease;
+  }
+
+  @media (min-width: 701px) {
+    .hero img { max-width: 420px; }
   }
 
   .hero img:hover {
