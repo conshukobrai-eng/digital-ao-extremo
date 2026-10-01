@@ -166,6 +166,55 @@
     color: var(--primary);
   }
 
+  .stories-menu {
+    position: relative;
+  }
+
+  .topbar-menu .stories-trigger,
+  .topbar-menu[open] .stories-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+    transition: background-color .2s ease;
+  }
+
+  .topbar-menu .stories-trigger::-webkit-details-marker { display: none; }
+  .stories-trigger span { font-size: 1.25rem; line-height: 1; }
+  .topbar-menu .stories-trigger:hover,
+  .topbar-menu .stories-trigger:focus-visible,
+  .stories-menu[open] > .stories-trigger {
+    background: #e8daef;
+    color: var(--text);
+    transform: none;
+    box-shadow: none;
+  }
+  .stories-menu[open] > .stories-trigger span { transform: rotate(90deg); }
+
+  .stories-links {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 8px);
+    min-width: 210px;
+    padding: 8px;
+    display: grid;
+    gap: 6px;
+    background: #fbf7fc;
+    border: 1px solid #dcc9e3;
+    border-radius: 10px;
+    box-shadow: 0 12px 24px rgba(74, 35, 90, 0.16);
+    text-align: left;
+    animation: menu-open .2s ease-out;
+  }
+
   .page-back {
     color:white;
     border:1px solid rgba(255,255,255,0.7);
@@ -205,7 +254,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 1 360px;
+    flex: 1 1 45%;
     min-width: 0;
   }
 
@@ -235,11 +284,11 @@
   }
 
   .hero img {
-  width:100%;
-  max-width:520px;
+  width:90%;
+  max-width:100%;
   height:auto;
   display:block;
-  border-radius:12px; 
+  border-radius:12px;
   box-shadow:0 6px 18px rgba(74,35,90,0.12);
   }
   .acoes {
@@ -538,10 +587,19 @@
     .header-inner { gap: 8px; }
     .topbar-menu { z-index: 2; flex-shrink: 0; }
     .menu-links { left: 0; right: auto; min-width: min(260px, calc(100vw - 24px)); }
+    .stories-links {
+      position: static;
+      min-width: 0;
+      margin: 6px 0 0 12px;
+      box-shadow: none;
+      border-radius: 8px;
+      background: #faf7fb;
+      animation: none;
+    }
     #TEXTO { font-size: clamp(1.45rem, 7vw, 2rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
     .banner { flex-direction: column; padding: 28px 16px; }
     .banner-text { margin: 0; text-align: left; }
-    .hero img { max-height: 300px; object-fit: cover; }
+    .hero img { max-height: none; object-fit: contain; }
     .detail-page { padding: 0 16px; margin-top: 24px; }
     .detail-images { grid-template-columns: 1fr; }
     .detail-page h2 { font-size: 2.2rem; }
