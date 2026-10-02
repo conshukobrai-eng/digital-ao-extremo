@@ -3,232 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rede Lilás: informação, acolhimento e caminhos seguros para mulheres em situação de violência.">
   <title>Rede Lilás</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="cadastroStatus" class="cadastro-status" role="status" aria-live="polite" hidden></div>
-  <header>
-    <div class="header-inner">
-      <div class="header-left">
-        <details class="topbar-menu">
-          <summary aria-label="Abrir menu" title="Abrir menu"><span class="menu-icon" aria-hidden="true">&#9776;</span></summary>
-          <nav class="menu-links" aria-label="Menu principal">
-            <a href="index.html">Início</a>
-            <a href="direitos.html">Direitos</a>
-            <a href="rede-de-apoio.html">Mulheres no Afeganistão</a>
-            <details class="stories-menu">
-              <summary class="stories-trigger">Histórias <span aria-hidden="true">&#8250;</span></summary>
-              <nav class="stories-links" aria-label="Variações de histórias">
-                <a href="navegacao-segura.html#MALALA-YOUSAFZAI">Malala</a>
-                <a href="navegacao-segura.html#CASO-ROGER">Caso Roger</a>
-                <a href="navegacao-segura.html#MARIA-DA-PENHA">Maria da Penha</a>
-                <a href="navegacao-segura.html#ELIZA-SAMUDIO">Eliza Samudio</a>
-                <a href="navegacao-segura.html#ALISON-BOTHA">Alison Botha</a>
-              </nav>
-            </details>
-          </nav>
-        </details>
-        <h1 class="brand-logo"><img src="banner.jpeg" alt="Rede Lilás"></h1>
-      </div>
-      <div class="header-buttons header-right">
-        <button type="button" id="modoDiscreto">Modo discreto</button>
-      </div>
+  <header class="site-header">
+    <div class="wrap hdr">
+      <a class="brand" href="index.html"><img src="banner.jpeg" alt="Rede Lilás, página inicial"></a>
+      <nav class="nav" aria-label="Menu principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="direitos.html">Direitos</a>
+        <a href="navegacao-segura.html">Histórias</a>
+        <a href="rede-de-apoio.html">Mulheres no Afeganistão</a>
+      </nav>
+      <button type="button" class="btn btn-exit" data-saida-rapida>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        Saída rápida
+      </button>
     </div>
   </header>
 
-  <section class="banner">
-    <div class="hero">
-      
-        <img src="baneeee.jpeg " alt="Banner Rede Lilás" width="100px" class="banner-image">
-     
+  <div class="strip">
+    <div class="wrap strip-in">
+      <strong>Alguém pode estar por perto?</strong>
+      <span>Toque em Saída rápida e esta página é trocada por um site comum. Nada aqui pede que você se identifique.</span>
     </div>
-  
-    <h2 class="banner-text">Não é só agressão. É sobre vidas.
-      A agressão contra a mulher não começa com um tapa. Ela começa com o controle, com o silêncio imposto, com o medo de ser quem se é. Começa quando uma mulher deixa de se reconhecer.
-      Este espaço foi criado para romper esse silêncio.
-      Aqui, a informação é acolhimento, a orientação é força e a denúncia é um caminho para a liberdade. Nosso compromisso é dar voz a quem por muito tempo foi calada, oferecer apoio, conhecimento e uma rede de proteção para que nenhuma mulher se sinta sozinha.
-      Se você está passando por isso, saiba: a culpa nunca é sua. E você não está sozinha.
-      Informar para proteger. Acolher para transformar. Denunciar para salvar.</h2>
-  </section>
+  </div>
 
-  <section class="info">
-    
-  </section>
+  <main>
+    <section class="hero-wrap">
+      <svg class="hero-arcs" aria-hidden="true" viewBox="0 0 760 760" fill="none"><circle cx="380" cy="380" r="360" stroke="#dcc6ea" stroke-width="2"/><circle cx="380" cy="380" r="280" stroke="#dcc6ea" stroke-width="2"/><circle cx="380" cy="380" r="200" stroke="#cfb3e2" stroke-width="2"/><circle cx="380" cy="380" r="110" fill="#ead9f4"/></svg>
+      <div class="wrap hero">
+        <div>
+          <p class="kicker">Informação, acolhimento e denúncia</p>
+          <h1 class="h1">Não é só agressão.<br>É sobre <em>vidas.</em></h1>
+          <p class="lead">A agressão contra a mulher não começa com um tapa. Ela começa com o controle, com o silêncio imposto, com o medo de ser quem se é. Este espaço foi criado para romper esse silêncio.</p>
+          <p class="promise">Se você está passando por isso, a culpa nunca é sua. E você não está sozinha.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="direitos.html">Conheça seus direitos</a>
+            <a class="btn btn-ghost" href="#ajuda">Encontrar ajuda perto de mim</a>
+          </div>
+        </div>
+        <aside class="panel" aria-label="Telefones de emergência">
+          <h2 class="panel-title">Precisa de ajuda agora?</h2>
+          <div class="num-row">
+            <div class="num">190</div>
+            <div class="num-info"><strong>Emergência</strong><span>Polícia, quando há risco imediato.</span></div>
+            <button type="button" class="copy" data-copy="190">Copiar</button>
+          </div>
+          <hr class="sep">
+          <div class="num-row">
+            <div class="num">180</div>
+            <div class="num-info"><strong>Central de Atendimento à Mulher</strong><span>Orientação e denúncia. Ligação gratuita, 24 horas.</span></div>
+            <button type="button" class="copy" data-copy="180">Copiar</button>
+          </div>
+          <p class="panel-note">Você também pode procurar uma Delegacia da Mulher, a Defensoria Pública ou o Ministério Público.</p>
+        </aside>
+      </div>
+    </section>
 
-  <section class="sobre">
-    <h3>Sobre a Rede Lilás</h3>
-    <p>A Rede Lilás oferece informação, apoio e caminhos seguros para mulheres em situação de violência. Aqui você encontra orientações práticas, contatos locais e recursos para se proteger e ajudar outras pessoas.</p>
-    <p>Se precisar, use o botão <strong>modo seguro</strong> no canto da tela e mude a aba imediatamente.</p>
-  </section>
+    <section class="wrap">
+      <figure class="banner-photo">
+        <img src="baneeee.jpeg" alt="Banner da Rede Lilás">
+      </figure>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-for">para proteger</span>
+          <span class="pillar-word">Informar</span>
+          <p class="muted">Reconheça os sinais da violência e entenda o que a lei garante a você.</p>
+          <a href="direitos.html">Conheça seus direitos &rarr;</a>
+        </div>
+        <div class="pillar">
+          <span class="pillar-for">para transformar</span>
+          <span class="pillar-word">Acolher</span>
+          <p class="muted">Histórias reais de dor, coragem e superação, para que nenhuma mulher se sinta só.</p>
+          <a href="navegacao-segura.html">Ler as histórias &rarr;</a>
+        </div>
+        <div class="pillar">
+          <span class="pillar-for">para salvar</span>
+          <span class="pillar-word">Denunciar</span>
+          <p class="muted">Telefones, delegacias e caminhos para pedir proteção com segurança.</p>
+          <a href="#ajuda">Encontrar ajuda &rarr;</a>
+        </div>
+      </div>
+    </section>
 
-  <section class="galeria">
-    <div class="item"><a rel='noopener' target='_blank' href='images.jpg'><img src='images.jpg' alt='Hero'></a><div class="caption"></div></div>
-    <div class="item"><a rel='noopener' target='_blank' href='images (1).jpg'><img src='images (1).jpg' alt='Photo 1'></a><div class="caption"></div></div>
-    <div class="item"><a rel='noopener' target='_blank' href='images (2).jpg'><img src='images (2).jpg' alt='Photo 2'></a><div class="caption"></div></div>
-  <div class="item"><a rel='noopener' target='_blank' href='images (1.jpg'><img src='images (1.jpg' alt='Photo 1 (root)'></a><div class="caption"></div></div>
-    <div class="item"><a rel='noopener' target='_blank' href='WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg'><img src='WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg' alt='Photo 2 (root)'></a><div class="caption"></div></div>
-  </section>
+    <section class="wrap sec g2" id="sobre">
+      <div>
+        <p class="kicker">Reconheça os sinais</p>
+        <h2 class="h2">A violência tem mais de uma forma.</h2>
+        <p class="muted" style="margin-top: 20px; max-width: 46ch;">A Lei Maria da Penha protege mulheres contra a violência doméstica e familiar. Ela pode ser física, psicológica, sexual, patrimonial ou moral, e quase nunca começa com agressão no corpo.</p>
+      </div>
+      <div>
+        <div class="sign"><span class="sign-t">Física</span><p class="muted">Qualquer conduta que ofenda o corpo ou a saúde da mulher.</p></div>
+        <div class="sign"><span class="sign-t">Psicológica</span><p class="muted">Ameaças, humilhações, controle e isolamento.</p></div>
+        <div class="sign"><span class="sign-t">Sexual</span><p class="muted">Qualquer contato ou relação sexual sem consentimento.</p></div>
+        <div class="sign"><span class="sign-t">Patrimonial</span><p class="muted">Reter documentos, dinheiro ou objetos que são seus.</p></div>
+        <div class="sign"><span class="sign-t">Moral</span><p class="muted">Calúnia, difamação e injúria.</p></div>
+      </div>
+    </section>
 
-  <section class="mapa">
-    <h3>Encontre Ajuda Perto de Você</h3>
-    <p id="mapaStatus" aria-live="polite">Solicitando sua localização para encontrar as delegacias mais próximas...</p>
-    <iframe id="mapaAjuda" title="Mapa com as delegacias mais próximas" loading="lazy"></iframe>
-    <a id="mapaLink" class="action-button map-link" href="https://www.google.com/maps/search/delegacias+mais+pr%C3%B3ximas" target="_blank" rel="noopener">Abrir busca no Google Maps</a>
-  </section>
+    <section class="band">
+      <div class="wrap sec g2">
+        <div>
+          <p class="kicker">Medida protetiva de urgência</p>
+          <div class="big48">48 horas</div>
+          <p class="band-p" style="margin-top: 20px; max-width: 40ch;">É o prazo em que o juiz pode decidir afastar o agressor de casa e proibir que ele se aproxime de você.</p>
+        </div>
+        <div>
+          <div class="right-row"><strong>Afastamento imediato</strong><span class="band-p">O agressor pode ser obrigado a sair de casa e a ficar longe da sua família, do seu trabalho e da escola dos seus filhos.</span></div>
+          <div class="right-row"><strong>Atendimento sem custo</strong><span class="band-p">Você tem direito a atendimento policial, de saúde e jurídico especializado, sem pagar nada.</span></div>
+          <div class="right-row"><strong>Você não entrega a intimação</strong><span class="band-p">Quem entrega é a polícia ou o oficial de justiça, para a sua segurança.</span></div>
+          <div style="margin-top: 28px;"><a class="btn btn-light" href="direitos.html">Ver todos os direitos</a></div>
+        </div>
+      </div>
+    </section>
 
-  <section class="cadastro">
-    <h3>Cadastre seu perfil</h3>
-    <form id="cadastroForm">
-      <label for="cadastroNome">Nome</label>
-      <input id="cadastroNome" name="nome" type="text" autocomplete="name" required>
-      <label for="cadastroEmail">E-mail</label>
-      <input id="cadastroEmail" name="email" type="email" autocomplete="email" required>
-      <button type="submit">Cadastrar</button>
-    </form>
-  </section>
+    <section class="wrap sec">
+      <p class="kicker">Mural de histórias</p>
+      <h2 class="h2" style="max-width: 20ch; margin-bottom: 16px;">Por trás de cada caso, existe uma vida.</h2>
+      <p class="muted" style="max-width: 56ch; margin-bottom: 40px;">Relatos verdadeiros de quem precisou se calar e encontrou força para continuar.</p>
+      <div class="g5">
+        <a class="tile" href="navegacao-segura.html#MALALA-YOUSAFZAI">
+          <div class="slot"><img src="malala.jpg" alt="Malala Yousafzai"></div>
+          <span class="tile-n">Malala</span>
+          <span class="tile-d">Atacada aos 15 anos por defender a educação. Nobel da Paz aos 17.</span>
+        </a>
+        <a class="tile" href="navegacao-segura.html#CASO-ROGER">
+          <div class="slot"><img src="ROGER.jpeg" alt="Caso Roger"></div>
+          <span class="tile-n">Caso Roger</span>
+          <span class="tile-d">Médico condenado por 37 estupros contra pacientes.</span>
+        </a>
+        <a class="tile" href="navegacao-segura.html#MARIA-DA-PENHA">
+          <div class="slot"><img src="maria%20da%20penha.jpeg" alt="Maria da Penha"></div>
+          <span class="tile-n">Maria da Penha</span>
+          <span class="tile-d">Sobreviveu a duas tentativas de assassinato e deu nome à lei.</span>
+        </a>
+        <a class="tile" href="navegacao-segura.html#ELIZA-SAMUDIO">
+          <div class="slot"><img src="ELIZA%20SILVA.jpeg" alt="Eliza Samudio"></div>
+          <span class="tile-n">Eliza Samudio</span>
+          <span class="tile-d">Desaparecida em 2010. O caso terminou em condenação em 2013.</span>
+        </a>
+        <a class="tile" href="navegacao-segura.html#ALISON-BOTHA">
+          <div class="slot"><img src="alison.jpeg" alt="Alison Botha"></div>
+          <span class="tile-n">Alison Botha</span>
+          <span class="tile-d">Sobreviveu a um ataque em 1994 e virou palestrante.</span>
+        </a>
+      </div>
+    </section>
 
+    <section class="wrap" style="padding-bottom: 88px;">
+      <p class="kicker">Campanhas de conscientização</p>
+      <div class="gallery">
+        <a href="images.jpg" target="_blank" rel="noopener"><img src="images.jpg" alt="Imagem de campanha"></a>
+        <a href="images%20(1).jpg" target="_blank" rel="noopener"><img src="images%20(1).jpg" alt="Imagem de campanha 1"></a>
+        <a href="images (1.jpg" target="_blank" rel="noopener"><img src="images (1.jpg" alt="Imagem de campanha 2"></a>
+        <a href="WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg" target="_blank" rel="noopener"><img src="WhatsApp-Image-2025-08-01-at-08.25.04-819x1024.jpeg" alt="Imagem de campanha 3"></a>
+      </div>
+    </section>
 
-  <footer>
-    <p style="color: aliceblue;">Rede Lilás — Informação e apoio. CEEPHXV</p>
+    <section id="ajuda" class="help-section">
+      <div class="wrap sec g2">
+        <div>
+          <p class="kicker">Encontre ajuda perto de você</p>
+          <h2 class="h2">Delegacias mais próximas, a um toque.</h2>
+          <p class="muted" style="margin: 20px 0 28px; max-width: 46ch;">Ao permitir a localização do aparelho, a busca abre no mapa já centrada onde você está. Se preferir não permitir, use a busca direta no Google Maps.</p>
+          <div class="cta-row">
+            <button type="button" class="btn btn-primary" id="usarLocalizacao">Usar minha localização</button>
+            <a id="mapaLink" class="btn btn-ghost" href="https://www.google.com/maps/search/delegacias+da+mulher+mais+pr%C3%B3ximas" target="_blank" rel="noopener">Abrir no Google Maps</a>
+          </div>
+        </div>
+        <div class="mapcard">
+          <div class="map-empty" id="mapaVazio">O mapa aparece aqui depois que você permitir a localização.</div>
+          <iframe id="mapaAjuda" title="Mapa com as delegacias mais próximas" loading="lazy" hidden></iframe>
+          <p class="map-status" id="mapaStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatos" class="wrap sec g2">
+      <div class="card">
+        <h2 class="h3">Seus contatos de apoio</h2>
+        <p class="muted small">Guarde os telefones de quem pode ajudar. A lista fica salva só neste aparelho.</p>
+        <div class="list" id="listaContatos"></div>
+        <form class="form" id="contatoForm" novalidate>
+          <label for="contatoNome">Nome do contato</label>
+          <input id="contatoNome" name="nome" type="text" autocomplete="off">
+          <label for="contatoTelefone">Telefone</label>
+          <input id="contatoTelefone" name="telefone" type="text" inputmode="tel" autocomplete="off">
+          <p class="err" id="contatoErro" role="alert" hidden>Preencha o nome e o telefone.</p>
+          <button type="submit" class="btn btn-primary" id="contatoSalvar">Adicionar contato</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2 class="h3">Cadastre seu perfil</h2>
+        <p class="muted small">Receba orientações e novidades da Rede Lilás. Informe só o que quiser.</p>
+        <p class="ok" id="cadastroStatus" role="status" aria-live="polite" hidden>Perfil cadastrado.</p>
+        <form class="form" id="cadastroForm" novalidate>
+          <label for="cadastroNome">Nome</label>
+          <input id="cadastroNome" name="nome" type="text" autocomplete="name">
+          <label for="cadastroEmail">E-mail</label>
+          <input id="cadastroEmail" name="email" type="email" autocomplete="email">
+          <p class="err" id="cadastroErro" role="alert" hidden>Preencha o nome e o e-mail.</p>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-in">
+      <div>
+        <div class="foot-brand">Rede Lilás</div>
+        <p>Informar para proteger. Acolher para transformar. Denunciar para salvar.</p>
+        <p style="font-size: 14px; margin-top: 8px;">Informação e apoio. CEEPHXV</p>
+      </div>
+      <p>Emergência: <strong>190</strong> &nbsp;|&nbsp; Central da Mulher: <strong>180</strong></p>
+    </div>
   </footer>
 
-  <script>
-    
-    var sairRapido = document.getElementById('sairRapido');
-    if (sairRapido) sairRapido.addEventListener('click', function () {
-      window.location.href = 'about:blank';
-    });
-    document.getElementById('modoDiscreto').addEventListener('click', function () {
-      window.location.href = 'https://br.shein.com/';
-    });
-
-    var cadastroTimeout;
-    document.getElementById('cadastroForm').addEventListener('submit', function (event) {
-      event.preventDefault();
-      var statusCadastro = document.getElementById('cadastroStatus');
-      statusCadastro.textContent = 'perfil cadastrado';
-      statusCadastro.hidden = false;
-      window.clearTimeout(cadastroTimeout);
-      cadastroTimeout = window.setTimeout(function () {
-        statusCadastro.hidden = true;
-      }, 4000);
-      this.reset();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    function localizarDelegacias() {
-      var status = document.getElementById('mapaStatus');
-      var mapa = document.getElementById('mapaAjuda');
-      var mapaLink = document.getElementById('mapaLink');
-
-      if (!navigator.geolocation) {
-        status.textContent = 'Seu aparelho não permite localizar delegacias automaticamente.';
-        mapaLink.hidden = false;
-        return;
-      }
-
-      navigator.geolocation.getCurrentPosition(function (posicao) {
-        var latitude = posicao.coords.latitude;
-        var longitude = posicao.coords.longitude;
-        var busca = encodeURIComponent('delegacias mais próximas');
-        mapa.src = 'https://www.google.com/maps?q=' + busca + '&ll=' + latitude + ',' + longitude + '&z=14&output=embed';
-        mapaLink.href = 'https://www.google.com/maps/search/' + busca + '/@' + latitude + ',' + longitude + ',14z';
-        status.textContent = 'Mostrando delegacias próximas à sua localização.';
-      }, function () {
-        status.textContent = 'Não foi possível acessar sua localização. Permita o acesso para encontrar as delegacias mais próximas.';
-        mapaLink.hidden = false;
-      }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
-    }
-
-    localizarDelegacias();
-
-
-    document.getElementById('con').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var nome = document.getElementById('nome').value || '';
-      var email = document.getElementById('email').value || '';
-      var mensagem = document.getElementById('mensagem').value || '';
-      if (!mensagem.trim()){
-        document.getElementById('contatoStatus').textContent = 'Por favor, escreva uma mensagem.';
-        return;
-      }
-
-
-      var msgs;
-      try {
-        msgs = JSON.parse(localStorage.getItem('rl_messages') || '[]');
-        if (!Array.isArray(msgs)) msgs = [];
-      } catch (error) {
-        msgs = [];
-      }
-      msgs.push({ nome: nome, email: email, mensagem: mensagem, ts: new Date().toISOString() });
-      localStorage.setItem('rl_messages', JSON.stringify(msgs));
-      document.getElementById('contatoStatus').textContent = 'Mensagem salva localmente e abrindo seu e-mail...';
-      var subject = encodeURIComponent('Contato pela Rede Lilás - ' + nome);
-      var body = encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\n\n' + mensagem);
-      var mailto = 'mailto:contato@redelilas.org?subject=' + subject + '&body=' + body;
-      setTimeout(function () { window.location.href = mailto; }, 700);
-    });
-
-  
-    function loadResources() {
-      try {
-        var resources = JSON.parse(localStorage.getItem('rl_resources') || '[]');
-        return Array.isArray(resources) ? resources : [];
-      } catch (error) {
-        return [];
-      }
-    }
-    function saveResources(list) { localStorage.setItem('rl_resources', JSON.stringify(list)); }
-    function escapeHtml(str) { return String(str).replace(/[&<>\"]/g, function (s) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]; }); }
-
-    function renderResources() {
-      var container = document.getElementById('resourceList');
-      container.innerHTML = '';
-      var list = loadResources();
-      if (!list.length) container.innerHTML = '<p style="color:#666">Nenhum recurso salvo ainda.</p>';
-      list.forEach(function (r, idx) {
-        var div = document.createElement('div');
-        div.className = 'resource-item';
-        var left = document.createElement('div');
-        left.innerHTML = '<strong>' + escapeHtml(r.name) + '</strong><br>Telefone: <span class="tel">' + escapeHtml(r.phone) + '</span>';
-        var right = document.createElement('div');
-        var copy = document.createElement('button');
-        copy.className = 'copy-btn'; copy.textContent = 'Copiar'; copy.setAttribute('data-copy', r.phone);
-        var edit = document.createElement('button'); edit.style.marginLeft = '8px'; edit.textContent = 'Editar';
-        var del = document.createElement('button'); del.style.marginLeft = '8px'; del.textContent = 'Remover';
-        copy.addEventListener('click', function () {
-          navigator.clipboard && navigator.clipboard.writeText(r.phone).then(function () { copy.textContent = 'Copiado'; setTimeout(function () { copy.textContent = 'Copiar'; }, 1400); }, function () { alert('Copie manualmente: ' + r.phone); });
-        });
-        edit.addEventListener('click', function () {
-          document.getElementById('resName').value = r.name;
-          document.getElementById('resPhone').value = r.phone;
-          document.getElementById('addRes').textContent = 'Atualizar';
-          document.getElementById('addRes').dataset.edit = idx;
-        });
-        del.addEventListener('click', function () { if (confirm('Remover esse recurso?')) { list.splice(idx, 1); saveResources(list); renderResources(); } });
-        right.appendChild(copy); right.appendChild(edit); right.appendChild(del);
-        div.appendChild(left); div.appendChild(right); container.appendChild(div);
-      });
-    }
-
-    document.getElementById('addRes').addEventListener('click', function () {
-      var name = document.getElementById('resName').value.trim();
-      var phone = document.getElementById('resPhone').value.trim();
-      if (!name || !phone) { alert('Preencha nome e telefone.'); return; }
-      var list = loadResources();
-      var editIdx = this.dataset.edit;
-      if (editIdx !== undefined) { list[editIdx] = { name: name, phone: phone }; delete this.dataset.edit; this.textContent = 'Adicionar'; }
-      else list.push({ name: name, phone: phone });
-      saveResources(list); renderResources(); document.getElementById('resName').value = ''; document.getElementById('resPhone').value = '';
-    });
-
-  
-    renderResources();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

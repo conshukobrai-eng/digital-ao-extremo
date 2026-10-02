@@ -3,144 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casos | Rede Lilás</title>
+  <title>Histórias | Rede Lilás</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="header-left">
-      <details class="topbar-menu">
-        <summary aria-label="Abrir menu" title="Abrir menu"><span class="menu-icon" aria-hidden="true">&#9776;</span></summary>
-        <nav class="menu-links" aria-label="Menu principal">
-          <a href="index.html">Início</a>
-          <a href="direitos.html">Direitos</a>
-          <a href="rede-de-apoio.html">Mulheres no Afeganistão</a>
-          <details class="stories-menu">
-            <summary class="stories-trigger">Histórias <span aria-hidden="true">&#8250;</span></summary>
-            <nav class="stories-links" aria-label="Variações de histórias">
-              <a href="navegacao-segura.html#MALALA-YOUSAFZAI">Malala</a>
-              <a href="navegacao-segura.html#CASO-ROGER">Caso Roger</a>
-              <a href="navegacao-segura.html#MARIA-DA-PENHA">Maria da Penha</a>
-              <a href="navegacao-segura.html#ELIZA-SAMUDIO">Eliza Samudio</a>
-              <a href="navegacao-segura.html#ALISON-BOTHA">Alison Botha</a>
-            </nav>
-          </details>
-        </nav>
-      </details>
-      <h1 id="TEXTO">Rede Lilás</h1>
-      </div>
-      <div class="header-right"><a class="page-back" href="index.html">Voltar</a></div>
+  <header class="site-header">
+    <div class="wrap hdr">
+      <a class="brand" href="index.html"><img src="banner.jpeg" alt="Rede Lilás, página inicial"></a>
+      <nav class="nav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="direitos.html">Direitos</a>
+        <a href="navegacao-segura.html" aria-current="page">Histórias</a>
+        <a href="rede-de-apoio.html">Mulheres no Afeganistão</a>
+      </nav>
+      <button type="button" class="btn btn-exit" data-saida-rapida>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        Saída rápida
+      </button>
     </div>
   </header>
-  <main class="detail-page">
-    <p class="detail-kicker">Por trás de cada comentário, existe uma pessoa. Por trás de cada caso, existe uma vida.
-Criamos este mural para dar voz a quem muitas vezes precisou se calar. O que você vai ler aqui são relatos verdadeiros, cheios de dor, superação e coragem.</p>
-    <h2>HISTORIAS</h2>
-    <hr>
-    <figure class="featured-image">
-      <img src="malala.jpeg" alt="malala">
-    </figure>
-    <h3 id="MALALA-YOUSAFZAI">MALALA YOUSAFZAI</h3>
-    <p>Malala Yousafzai nasceu em 1997 no Paquistão. Desde pequena, seu pai, que era professor e dono de uma escola, ensinou a ela a importância de estudar.
 
-Onde ela morava, no Vale do Swat, um grupo extremista chamado Talibã tomou o controle e proibiu que as meninas fossem à escola. Malala, com apenas 11 anos, não aceitou e começou a escrever um blog secreto para a BBC, contando o medo que sentia e defendendo o direito das meninas de estudarem.
+  <main class="wrap">
+    <section style="padding-block: 72px 32px;">
+      <p class="kicker">Mural de histórias</p>
+      <h1 class="h1">Por trás de cada caso, existe uma vida.</h1>
+      <p class="muted" style="margin-top: 24px; font-size: 19px; max-width: 60ch;">Criamos este mural para dar voz a quem muitas vezes precisou se calar. O que você vai ler aqui são relatos verdadeiros, cheios de dor, superação e coragem. Alguns trechos tratam de violência.</p>
+      <nav class="toc" aria-label="Ir para uma história">
+        <a href="#MALALA-YOUSAFZAI">Malala</a>
+        <a href="#CASO-ROGER">Caso Roger</a>
+        <a href="#MARIA-DA-PENHA">Maria da Penha</a>
+        <a href="#ELIZA-SAMUDIO">Eliza Samudio</a>
+        <a href="#ALISON-BOTHA">Alison Botha</a>
+      </nav>
+    </section>
 
-Por causa disso ela ficou conhecida no mundo todo, e o Talibã a considerou uma inimiga. Em 9 de outubro de 2012, quando tinha 15 anos, ela foi atacada dentro do ônibus da escola e levou um tiro na cabeça.
+    <article id="MALALA-YOUSAFZAI" class="story-row">
+      <div class="slot"><img src="malala.jpg" alt="Malala Yousafzai"></div>
+      <div>
+        <p class="st-meta">Paquistão, 2012</p>
+        <h2 class="st-t">Malala Yousafzai</h2>
+        <p class="st-p">Malala Yousafzai nasceu em 1997 no Paquistão. Desde pequena, seu pai, que era professor e dono de uma escola, ensinou a ela a importância de estudar.</p>
+        <p class="st-p">No Vale do Swat, onde ela morava, um grupo extremista chamado Talibã tomou o controle e proibiu que as meninas fossem à escola. Malala, com apenas 11 anos, não aceitou e começou a escrever um blog secreto para a BBC, contando o medo que sentia e defendendo o direito das meninas de estudarem.</p>
+        <p class="st-p">Por causa disso ela ficou conhecida no mundo todo, e o Talibã a considerou uma inimiga. Em 9 de outubro de 2012, quando tinha 15 anos, ela foi atacada dentro do ônibus da escola e levou um tiro na cabeça.</p>
+        <p class="st-p">Malala sobreviveu, foi levada para um hospital na Inglaterra e se recuperou. Em vez de se calar com medo, ela ficou ainda mais forte e passou a lutar pelos direitos de todas as crianças. Em 2014, aos 17 anos, tornou-se a pessoa mais jovem da história a ganhar o Prêmio Nobel da Paz.</p>
+        <p class="quote">Uma criança, um professor, um livro e um lápis podem mudar o mundo.</p>
+      </div>
+    </article>
 
-Malala sobreviveu, foi levada para um hospital na Inglaterra e se recuperou. Em vez de se calar com medo, ela ficou ainda mais forte e passou a lutar pelos direitos de todas as crianças.
+    <article id="CASO-ROGER" class="story-row rev">
+      <div>
+        <p class="st-meta">São Paulo, 1995 a 2008</p>
+        <h2 class="st-t">Caso Roger</h2>
+        <p class="st-p">Roger Abdelmassih era um médico muito famoso e respeitado no Brasil, especialista em reprodução humana. Ele era dono de uma clínica de fertilização em uma área nobre de São Paulo e foi responsável pelo nascimento de milhares de bebês. Chegou a ser homenageado pela Câmara.</p>
+        <p class="st-p">Por trás dessa fama, ele cometia crimes dentro da própria clínica. Entre 1995 e 2008, abusou de dezenas de pacientes que procuravam tratamento para engravidar. As vítimas eram mulheres vulneráveis, muitas sob efeito de sedação usada para a retirada de óvulos.</p>
+        <p class="st-p">As primeiras denúncias apareceram em 2008, feitas por uma ex-funcionária, e em 2009 o caso explodiu na mídia nacional quando várias pacientes procuraram a polícia. Em 2010 ele foi condenado a 278 anos de prisão, a maior condenação da história do Brasil na época. Depois de recursos, a pena foi reduzida para 181 anos por 37 estupros. Em 2011 teve o registro de médico cassado.</p>
+        <p class="st-p">Antes de ser preso, fugiu do Brasil e ficou 3 anos foragido. Foi encontrado em 2014 no Paraguai, em uma operação da Polícia Federal com a Interpol. A imprensa chamou o caso de "De médico e de monstro".</p>
+      </div>
+      <div class="slot"><img src="ROGER.jpeg" alt="Roger Abdelmassih sendo levado de volta à prisão em 2020"></div>
+    </article>
 
-Em 2014, aos 17 anos, ela se tornou a pessoa mais jovem da história a ganhar o Prêmio Nobel da Paz.
+    <article id="MARIA-DA-PENHA" class="story-row">
+      <div class="slot"><img src="maria%20da%20penha.jpeg" alt="Maria da Penha"></div>
+      <div>
+        <p class="st-meta">Fortaleza, 1983 a 2006</p>
+        <h2 class="st-t">Maria da Penha</h2>
+        <p class="st-p">Maria da Penha Maia Fernandes é uma farmacêutica cearense, nascida em Fortaleza em 1945. Em 1974 ela se casou com o professor universitário colombiano Marco Antonio Heredia Viveros. No começo o casamento parecia normal, mas depois ele passou a ser muito agressivo.</p>
+        <p class="st-p">Em 1983 aconteceram duas tentativas de assassinato. Na primeira, enquanto ela dormia, ele atirou em suas costas com uma espingarda. Maria sobreviveu, mas ficou paraplégica. Na segunda, quando voltou do hospital e ainda se recuperava, ele tentou eletrocutá-la no chuveiro.</p>
+        <p class="st-p">Maria denunciou, mas o Brasil não fez justiça. O marido foi julgado duas vezes e saiu livre nas duas, por causa de recursos dos advogados. Ela esperou 19 anos por uma resposta. Em 1998 denunciou o Brasil à Comissão Interamericana de Direitos Humanos, da OEA, que em 2001 condenou o país por ser omisso e tolerante com a violência contra a mulher.</p>
+        <p class="st-p">Por causa dessa condenação, o Brasil foi obrigado a criar uma lei. Em 7 de agosto de 2006 nasceu a Lei nº 11.340, a Lei Maria da Penha, considerada pela ONU uma das 3 melhores leis do mundo para proteger as mulheres. Hoje, Maria da Penha é um símbolo da luta contra a violência doméstica.</p>
+      </div>
+    </article>
 
-E como ela mesma disse: "Uma criança, um professor, um livro e um lápis podem mudar o mundo."</p>
+    <article id="ELIZA-SAMUDIO" class="story-row rev">
+      <div>
+        <p class="st-meta">Minas Gerais, 2010</p>
+        <h2 class="st-t">Eliza Samudio</h2>
+        <p class="st-p">Eliza Silva Samudio era uma jovem de 25 anos, modelo, que morava no interior de São Paulo. Teve um relacionamento com o goleiro Bruno Fernandes, na época ídolo do Flamengo e goleiro da Seleção Brasileira. Em 2009 engravidou, e o filho nasceu em fevereiro de 2010. Eliza foi à Justiça pedir pensão alimentícia e o reconhecimento da paternidade.</p>
+        <p class="st-p">Em junho de 2010, Eliza desapareceu. Segundo as investigações da polícia de Minas Gerais, ela foi atraída para um sítio em Esmeraldas (MG) com a promessa de uma conversa sobre a pensão. Lá, foi mantida em cárcere privado, agredida e assassinada, com a ajuda de amigos de Bruno. O corpo de Eliza nunca foi encontrado.</p>
+        <p class="st-p">Bruno foi preso em 2010. Em 2013, foi condenado a 22 anos e 3 meses de prisão por homicídio, sequestro e ocultação de cadáver. Os outros envolvidos também foram condenados. O filho de Eliza hoje mora com a avó materna.</p>
+      </div>
+      <div class="slot"><img src="ELIZA%20SILVA.jpeg" alt="Eliza Samudio"></div>
+    </article>
 
-<hr>
-   
-<figure class="featured-image">
-      <img src="ROGER.jpeg" alt="ROGER">
-    </figure>
-    <h3 id="CASO-ROGER">CASO ROGER</h3>
-    <p>Roger Abdelmassih era um médico muito famoso e respeitado no Brasil, especialista em reprodução humana. Ele era dono de uma clínica de fertilização em uma área nobre de São Paulo e foi responsável pelo nascimento de milhares de bebês. Chegou até a ser homenageado pela Câmara.
+    <article id="ALISON-BOTHA" class="story-row">
+      <div class="slot"><img src="alison.jpeg" alt="Alison Botha"></div>
+      <div>
+        <p class="st-meta">África do Sul, 1994</p>
+        <h2 class="st-t">Alison Botha</h2>
+        <p class="st-p">Alison Botha era uma jovem de 27 anos que morava em Port Elizabeth, na África do Sul. Ela levava uma vida normal, trabalhava em seguros e gostava de viajar.</p>
+        <p class="st-p">Na noite de 18 de dezembro de 1994, quando voltava para casa de carro, foi abordada por dois homens, Frans du Toit e Theuns Kruger, que a obrigaram a dirigir até uma área deserta. Lá, cometeram violências terríveis contra ela e a deixaram desacordada, com muitos ferimentos de faca, achando que estava morta.</p>
+        <p class="st-p">Mesmo com ferimentos gravíssimos, Alison não desistiu. Conseguiu se levantar e se arrastou até a estrada para pedir ajuda. Um estudante de veterinária que passava de carro a encontrou e a levou ao hospital. Os médicos disseram que foi um milagre ela ter sobrevivido. Os dois agressores foram condenados à prisão perpétua em 1995.</p>
+        <p class="st-p">Depois de se recuperar, Alison se tornou uma palestrante motivacional conhecida no mundo todo. Escreveu dois livros e fala sobre superação, coragem e como recomeçar depois de um trauma.</p>
+      </div>
+    </article>
 
-Por trás dessa fama, ele cometia crimes dentro da própria clínica. Entre 1995 e 2008, ele abusou de dezenas de pacientes que procuravam tratamento para engravidar. As vítimas eram mulheres que estavam vulneráveis, muitas sob efeito de sedação usada para a retirada de óvulos. 
-
-As primeiras denúncias apareceram em 2008, feitas por uma ex-funcionária, e em 2009 o caso explodiu na mídia nacional quando várias pacientes procuraram a polícia. 
-
-Em 2010 ele foi condenado pela primeira vez a 278 anos de prisão por estupro e atentado violento ao pudor, a maior condenação da história do Brasil na época. Depois de recursos a pena foi reduzida para 181 anos de prisão por 37 estupros. Em 2011 ele teve o registro de médico cassado. 
-
-Antes de ser preso, em 2011, ele fugiu do Brasil e ficou 3 anos foragido. Foi encontrado em 2014 no Paraguai, vivendo com a família, em uma operação da Polícia Federal com a Interpol. 
-
-Desde então ele está preso. Na foto que você mandou é o momento em 2020 em que a polícia foi levá-lo de volta para a cadeia após ele ter conseguido prisão domiciliar por motivos de saúde.
-
-Por causa da gravidade, a imprensa chamou o caso de "De médico e de monstro".</p>
-
-<hr>
-<figure class="featured-image">
-      <img src="maria da penha.jpeg" alt="maria">
-    </figure>
-  <h3 id="MARIA-DA-PENHA">MARIA DA PENHA</h3>
-  <p>Maria da Penha Maia Fernandes é uma farmacêutica cearense, nascida em Fortaleza em 1945.
-
-Em 1974 ela se casou com o professor universitário colombiano Marco Antonio Heredia Viveros. No começo o casamento parecia normal, mas depois ele começou a ser muito agressivo.
-
-Em 1983 aconteceram as duas tentativas de assassinato:
-
- 1.   A primeira: Enquanto ela dormia, ele atirou nas costas dela com uma espingarda. Maria sobreviveu, mas ficou paraplégica - nunca mais voltou a andar.
- 2.   A segunda: Quando ela voltou do hospital e ainda estava se recuperando, ele tentou eletrocutá-la no chuveiro.
-
-Maria denunciou, mas o Brasil não fez justiça. O marido foi julgado duas vezes e nos dois julgamentos conseguiu sair livre, por causa de recursos dos advogados. Ela ficou 19 anos esperando por justiça, sem nenhuma resposta.
-
-Como a justiça brasileira não a ajudava, em 1998 ela denunciou o Brasil para a Comissão Interamericana de Direitos Humanos (da OEA).
-
-Em 2001, a Comissão condenou o Brasil por ser omisso e tolerante com a violência contra a mulher. Por causa dessa condenação internacional, o Brasil foi obrigado a criar uma lei.
-
-Assim, em 7 de agosto de 2006, foi criada a Lei nº 11.340 - a Lei Maria da Penha, considerada pela ONU uma das 3 melhores leis do mundo para proteger as mulheres.
-
-A lei tornou mais rigorosa a punição para quem agride, protege a mulher e cria medidas como a proibição do agressor se aproximar da vítima.
-
-Hoje, Maria da Penha é um símbolo da luta contra a violência doméstica.</p>
-<hr>
-
-<figure class="featured-image">
-      <img src="ELIZA SILVA.jpeg" alt="ELIZA">
-    </figure>
-    <h3 id="ELIZA-SAMUDIO">ELIZA SAMUDIO</h3>
-    <p>Eliza Silva Samudio era uma jovem de 25 anos, modelo, que morava no interior de São Paulo. Ela teve um relacionamento com o goleiro Bruno Fernandes, que na época era ídolo do Flamengo e goleiro da Seleção Brasileira.
-
-Em 2009, Eliza engravidou de Bruno. Ela conta que ele não queria assumir a criança e pediu para ela fazer aborto, mas ela não aceitou. O filho nasceu, o Bruninho, em fevereiro de 2010.
-
-Eliza então foi à Justiça para pedir pensão alimentícia e reconhecimento da paternidade.
-
-Em junho de 2010, Eliza desapareceu. Segundo as investigações da polícia de Minas Gerais, Bruno atraiu Eliza para o sítio dele em Esmeraldas (MG) dizendo que iria conversar sobre a pensão.
-
-No sítio, ela foi mantida em cárcere privado, agredida e assassinada. O crime foi cometido com a ajuda de amigos de Bruno, entre eles Luiz Henrique Ferreira Romão, o Macarrão, e o ex-policial Marcos Aparecido dos Santos, o Bola.
-
-O corpo de Eliza nunca foi encontrado até hoje. Segundo a denúncia do Ministério Público, após o crime o corpo foi esquartejado e depois ocultado - o Bola teria jogado os restos para cães.
-
-Bruno foi preso em 2010. Em 2013, ele foi condenado a 22 anos e 3 meses de prisão por homicídio, sequestro e ocultação de cadáver. Macarrão e Bola também foram condenados.
-
-O filho de Eliza, Bruninho, hoje mora com a avó materna.</p>
-
-<hr>
-
-<figure class="featured-image">
-      <img src="alison.jpeg" alt="alison">
-    </figure>
-    <h3 id="ALISON-BOTHA">ALISON BOTHA</h3>
-    <p>Alison Botha era uma jovem de 27 anos que morava em Port Elizabeth, na África do Sul. Ela levava uma vida normal, trabalhava em seguros e gostava de viajar.
-
-Na noite de 18 de dezembro de 1994, quando voltava para casa de carro, ela foi abordada por dois homens, Frans du Toit e Theuns Kruger. Eles entraram no carro dela e a obrigaram a dirigir para uma área deserta.
-
-Lá, eles cometeram violências terríveis contra ela. A deixaram desacordada, com muitos ferimentos de faca, e foram embora achando que ela estava morta.
-
-Mesmo com ferimentos gravíssimos e muito machucada, Alison não desistiu. Ela conseguiu se levantar e se arrastou até a estrada para pedir ajuda. Um estudante de veterinária que passava de carro a encontrou e a levou para o hospital. Os médicos disseram que foi um milagre ela ter sobrevivido.
-
-Os dois agressores foram presos e condenados à prisão perpétua em 1995.
-
-Depois de se recuperar, Alison se tornou uma palestrante motivacional muito conhecida no mundo. Ela escreveu dois livros e dá palestras sobre superação, coragem e como recomeçar depois de um trauma. Ela virou um símbolo de força e sobrevivência.</p>
-
-<hr>
-    <p class="detail-note">Que a memória desses relatos sirva como alerta, acolhimento e força para que nenhuma mulher precise caminhar sozinha.</p>
+    <section style="padding-block: 40px 88px; border-top: 1px solid var(--line);">
+      <p class="note">Que a memória desses relatos sirva como alerta, acolhimento e força para que nenhuma mulher precise caminhar sozinha.</p>
+      <div style="margin-top: 32px;"><a class="btn btn-primary" href="index.html">Voltar para a página inicial</a></div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-in">
+      <div>
+        <div class="foot-brand">Rede Lilás</div>
+        <p style="font-size: 14px;">Informação e apoio. CEEPHXV</p>
+      </div>
+      <p>Emergência: <strong>190</strong> &nbsp;|&nbsp; Central da Mulher: <strong>180</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
