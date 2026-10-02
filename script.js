@@ -1,4 +1,4 @@
-/* Rede Lilás — comportamentos compartilhados entre as páginas */
+
 (function () {
   'use strict';
 
@@ -6,7 +6,7 @@
 
   function $(id) { return document.getElementById(id); }
 
-  /* Saída rápida: troca a página por um site comum e não deixa a Rede Lilás no "Voltar" */
+ 
   var botoesSaida = document.querySelectorAll('[data-saida-rapida]');
   for (var i = 0; i < botoesSaida.length; i++) {
     botoesSaida[i].addEventListener('click', function () {
@@ -14,7 +14,7 @@
     });
   }
 
-  /* Copiar texto (telefones) */
+  
   function copiarTexto(texto, botao) {
     var rotulo = botao.getAttribute('data-rotulo') || botao.textContent;
     botao.setAttribute('data-rotulo', rotulo);
@@ -38,7 +38,7 @@
     });
   }
 
-  /* Mapa de delegacias próximas (só na página inicial) */
+ 
   var mapaStatus = $('mapaStatus');
   if (mapaStatus) {
     var mapa = $('mapaAjuda');
@@ -67,7 +67,7 @@
     });
   }
 
-  /* Cadastro de perfil (só na página inicial) */
+  
   var cadastroForm = $('cadastroForm');
   if (cadastroForm) {
     var cadastroStatus = $('cadastroStatus');
@@ -90,7 +90,7 @@
     });
   }
 
-  /* Contatos de apoio, salvos só neste aparelho (só na página inicial) */
+  
   var lista = $('listaContatos');
   if (lista) {
     var CHAVE = 'rl_resources';
@@ -118,7 +118,7 @@
     }
 
     function salvar(dados) {
-      try { localStorage.setItem(CHAVE, JSON.stringify(dados)); } catch (e) { /* sem armazenamento */ }
+      try { localStorage.setItem(CHAVE, JSON.stringify(dados)); } catch (e) {  }
     }
 
     var contatos = carregar();

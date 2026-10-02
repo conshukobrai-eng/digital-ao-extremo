@@ -1,6 +1,3 @@
-/* Rede Lilás — novo visual
-   Paleta: tinta ameixa #2b1238, violeta #6d2f8f, lilás #f6f0fa, coral #b4374a (só para urgência)
-   Fontes: Cormorant Garamond (títulos) e Nunito Sans (texto) */
 
 :root {
   --ink: #2b1238;
@@ -97,7 +94,7 @@ summary:focus-visible {
 .btn-exit { background: var(--coral); color: var(--white); min-height: 44px; padding: 0 18px; font-size: 15px; }
 .btn-exit:hover { background: var(--coral-dark); color: var(--white); }
 
-/* Cabeçalho */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -124,7 +121,7 @@ summary:focus-visible {
 .strip { background: var(--lilac-2); font-size: 15px; }
 .strip-in { display: flex; align-items: center; gap: 10px; min-height: 44px; flex-wrap: wrap; padding-block: 6px; }
 
-/* Início: abertura */
+
 .hero-wrap { position: relative; overflow: hidden; }
 .hero-arcs { position: absolute; right: -180px; top: -140px; width: 760px; height: 760px; pointer-events: none; }
 .hero {
@@ -186,7 +183,7 @@ summary:focus-visible {
   background: #f4ebf7;
 }
 
-/* Início: três verbos */
+
 .pillars {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -203,12 +200,12 @@ summary:focus-visible {
 .g2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: start; }
 .g2.tight { gap: 20px; }
 
-/* Início: formas de violência */
+
 .sign { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; padding-block: 22px; border-top: 1px solid var(--line); align-items: baseline; }
 .sign:last-child { border-bottom: 1px solid var(--line); }
 .sign-t { font-family: var(--font-display); font-size: 32px; font-weight: 700; line-height: 1; }
 
-/* Início: faixa 48 horas */
+
 .band { background: var(--plum); color: var(--white); }
 .band .kicker { color: var(--coral-soft); }
 .big48 { font-family: var(--font-display); font-size: clamp(96px, 14vw, 170px); line-height: .85; font-weight: 700; color: var(--white); }
@@ -217,7 +214,7 @@ summary:focus-visible {
 .right-row:last-of-type { border-bottom: 1px solid #6b3f85; }
 .right-row strong { font-size: 18px; }
 
-/* Início: mural de histórias */
+
 .g5 { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
 .tile { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink); }
 .tile:hover { color: var(--ink); }
@@ -253,7 +250,7 @@ summary:focus-visible {
 .gallery a { display: block; overflow: hidden; border-radius: 14px; }
 .gallery a:hover img { transform: scale(1.04); }
 
-/* Início: mapa, contatos, cadastro */
+
 .help-section { background: var(--white); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
 .mapcard { background: var(--white); border-radius: 24px; padding: 20px; border: 1px solid var(--line-soft); }
 .help-section .mapcard { background: var(--ground); }
@@ -348,7 +345,7 @@ summary:focus-visible {
 }
 .pull { font-family: var(--font-display); border-left: 4px solid var(--violet); padding-left: 22px; font-size: clamp(26px, 3vw, 36px); line-height: 1.2; font-weight: 700; }
 
-/* Histórias */
+
 .toc { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 32px; }
 .toc a {
   padding: 8px 16px;
@@ -389,7 +386,7 @@ summary:focus-visible {
 .quote { font-family: var(--font-display); font-size: 28px; line-height: 1.2; font-weight: 600; font-style: italic; color: var(--violet); border-left: 4px solid var(--violet); padding-left: 20px; margin-top: 22px; max-width: 30ch; }
 .note { border-left: 4px solid var(--coral); padding-left: 20px; font-size: 20px; font-weight: 700; max-width: 60ch; }
 
-/* Mulheres no Afeganistão */
+
 .hero-page { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 56px; align-items: end; padding-block: 72px 56px; }
 .hero-page .h1 { font-size: clamp(44px, 5.8vw, 78px); }
 .hero-page .lead { font-size: 20px; margin-top: 24px; margin-bottom: 0; }
@@ -406,7 +403,7 @@ summary:focus-visible {
 .cta { background: var(--white); border: 1px solid var(--line-soft); border-radius: 24px; padding: 40px 36px; }
 .hashtags { margin-top: 20px; font-weight: 700; color: var(--violet); }
 
-/* Rodapé */
+
 .site-footer { background: var(--ink); color: #e9d9f3; }
 .foot-in { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-block: 36px; align-items: flex-end; }
 .foot-brand { font-family: var(--font-display); font-size: 30px; font-weight: 700; color: var(--white); }
